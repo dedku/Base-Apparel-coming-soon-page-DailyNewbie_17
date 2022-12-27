@@ -11,23 +11,25 @@
     *,
     *::before,
     *::after {
-        box-sizing: border-box;
+    @apply box-border
     }
 
     * {
-        padding: 0;
-        margin: 0;
+    @apply p-0 m-0 text-in
+    }
+
+    *{
         font: inherit;
     }
 
     ul[role='list'],
     ol[role='list'] {
-        list-style: none;
+    @apply list-none
     }
 
     html,
     body {
-        height: 100%;
+    @apply h-full
     }
 
     html {
@@ -35,7 +37,7 @@
     }
 
     html:focus-within {
-        scroll-behavior: smooth;
+    @apply scroll-smooth
     }
 
     body {
@@ -50,8 +52,7 @@
     img,
     picture,
     svg {
-        max-width: 100%;
-        display: block;
+    @apply max-w-full block
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -70,23 +71,25 @@
     }
 
     body {
-        font-family: 'Kumbh Sans', sans-serif;
-        font-size: var(--fs-100);
-        display: grid;
-        place-content: center;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+    @apply grid place-content-center justify-center items-center text-center
     }
 
     main,
     section {
-        height: 100%;
-        width: 100%;
+    @apply h-full w-full
     }
 
     section {
-        display: grid;
-        place-content: center;
+    @apply grid place-content-center
+    }
+}
+
+@layer components {
+    .attribution {
+    @apply text-xs text-center
+    }
+
+    .attribution a{
+    @apply text-red-300
     }
 }
