@@ -15,7 +15,7 @@
     }
 
     * {
-    @apply p-0 m-0 text-in
+    @apply p-0 m-0
     }
 
     *{
@@ -69,27 +69,25 @@
             scroll-behavior: auto !important;
         }
     }
-
-    body {
-    @apply grid place-content-center justify-center items-center text-center
-    }
-
-    main,
-    section {
-    @apply h-full w-full
-    }
-
-    section {
-    @apply grid place-content-center
-    }
 }
 
 @layer components {
     .attribution {
-    @apply text-xs text-center
+    @apply text-xs text-center absolute bottom-0 xl:left-[42%] left-[22%] mb-4
     }
 
     .attribution a{
-    @apply text-red-300
+    @apply text-red-300 transition-all duration-200 ease-linear
+    }
+
+    .attribution a:hover{
+    @apply  p-2 bg-red-200 rounded-full
+    }
+    .bg-btn{
+        background: linear-gradient(135deg, theme(colors.red.200) 0%, theme(colors.red.300) 100%);
+    }
+    .bg-btn::before{
+        content: '';
+        background-image: url(../public/icon-arrow.svg);
     }
 }

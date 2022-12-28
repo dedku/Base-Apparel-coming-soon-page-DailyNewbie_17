@@ -5,30 +5,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./src/index.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="./public/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
   <title>Frontend Mentor | Base Apparel coming soon page</title>
 </head>
 
-<body>
-  <header>
+<body class="bg-red-100 max-w-xl min-h-full mx-auto xl:max-w-[1440px] ">
+  <header class="py-16 pl-10 absolute top-0 z-30 xl:pl-[22rem]">
     <div>
-      <a href="#"><img src="./public/logo.svg" alt="logo"></a>
+      <a href="#"><img class="h-8 xl:h-10" src="./logo.svg" alt="logo"></a>
     </div>
   </header>
-  <main>
-    <section>
-      <div>
-        <img src="./public/hero-mobile.jpg" alt="">
-        <h1>We're coming soon</h1>
+  <main class="min-h-full">
+    <section class="min-h-full">
+      <div class="flex flex-col xl:flex-row-reverse">
+        <picture class="">
+          <source media="(min-width:1280px)" srcset="./hero-desktop.jpg">
+          <img src="./hero-mobile.jpg" alt="" aria-hidden="true" class="xl:h-[73rem] pt-36 xl:pt-0">
+        </picture>
+        <div
+          class="pt-16 px-10 flex flex-col justify-center xl:px-[22rem] xl:pt-0  xl:bg-[url('/bg-pattern-desktop.svg')] max-w-full">
+          <h1
+            class="text-red-400 text-6xl text-center xl:text-left  pb-8 font-light tracking-[1rem] xl:text-8xl max-w-[45rem]">
+            WE'RE
+            <span class="font-semibold text-red-900">COMING
+              SOON</span>
+          </h1>
 
-        <p>Hello fellow shoppers! We're currently building our new fashion store.
-          Add your email below to stay up-to-date with announcements and our launch deals.</p>
+          <p class="text-2xl text-center text-red-400 font-medium xl:text-left max-w-[45rem]">Hello fellow shoppers!
+            We're currently
+            building our
+            new fashion
+            store.
+            Add your email below to stay up-to-date with announcements and our launch deals.</p>
 
-        <form>
-          <input type="email" placeholder="Email Address">
-          <input type="submit">
-        </form>
-        Email Address
+          <form class="mt-10 w-full flex items-center justify-center max-w-[45rem]">
+            <input
+              class="py-5 pl-10 border-red-200 border-2 rounded-full text-2xl  pr-32 placeholder:text-red-200 w-full focus:outline-none focus:ring-1 focus:ring-red-200 invalid:border-red-700-500 invalid:text-red-700 focus:invalid:border-red-500 focus:invalid:ring-red-700"
+              type="email" placeholder="Email Address" id="input">
+            <input class="-ml-24 bg-no-repeat py-6 rounded-full bg-center cursor-pointer w-24 xl:-ml-36 xl:w-36
+               bg-btn" type="submit" value="" id="btn">
+          </form>
+          <div class="text-center pt-8 text-red-700" id="error"></div>
+        </div>
       </div>
     </section>
   </main>
